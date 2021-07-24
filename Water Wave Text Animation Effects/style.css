@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.liquid{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #94b8d5;
+}
+
+.liquid h2{
+    position: absolute;
+    font-size: 24vw;
+}
+
+.liquid h2:nth-child(1){
+    color: white;
+    text-shadow: -2px 2px 0px #183954,
+    -4px 4px 0px #183954,
+    -6px 6px 0px #183954,
+    -8px 8px 0px #183954,
+    -18px 18px 20px rgba(0, 0, 0, 0.5),
+    -18px 18px 50px rgba(0, 0, 0, 0.5);
+    
+
+}
+
+.liquid h2:nth-child(2){
+    color: #2196f3;
+    opacity: 0.5;
+    animation: animate 3s ease-in-out infinite;
+}
+
+.liquid h2:nth-child(3){
+    color: #2196f3;
+    opacity: 0.5;
+    animation: animate 6s ease-in-out infinite;
+}
+
+.liquid h2:nth-child(4){
+    color: #2196f3;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate{
+    0%, 100%{
+        clip-path: polygon(0% 46%, 16% 45%, 34% 52%, 50% 61%, 
+        68% 65%, 85% 61%, 100% 53%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0% 66%, 14% 73%, 34% 76%, 50% 71%, 
+        64% 62%, 79% 55%, 100% 51%, 100% 100%, 0% 100%);
+    }
+}
+
