@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    scroll-snap-align: start;
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh; 
+} 
+.one{
+    background-color: cadetblue;
+}
+
+.two{
+    background-color: violet;
+}
+.three{
+    background-color: #cccccc;
+}
+.four{
+    background-color: plum;
+}
+.five{
+    background-color: teal;
+}
