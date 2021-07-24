@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Checkout Form | Credit Card Payment Form</title>
+</head>
+<body>
+    
+    <div class="payment">
+        <div class="bg"></div>
+        <div class="card">
+            <img src="./static/chip.png" class="chip" alt="">
+            <div class="logo"></div>
+            <h2 class="bankName" contenteditable="true" maxlength="128">Bank Name</h2>
+            <form action="">
+                <div class="inputBox">
+                    <span>Card No.</span>
+                    <input type="text" placeholder="0123 4567 8901 2345" maxlength="19">
+                </div>
+                <div class="inputBox">
+                    <span>Card Holder</span>
+                    <input type="text" placeholder="Elon Musk" maxlength="128">
+                </div>
+                <div class="group">
+                    <div class="inputBox">
+                        <span>Valid Thru</span>
+                        <input type="text" placeholder="MM/YY" maxlength="5">
+                    </div>
+                    <div class="inputBox">
+                        <span>CCV</span>
+                        <input type="password" placeholder="***" maxlength="3">
+                    </div>
+                </div>
+            </form>
+            <div class="tempBtn">
+                <button class="btn">Confirm and Pay</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
