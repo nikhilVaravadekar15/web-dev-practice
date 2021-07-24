@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #222;
+    min-height: 200vh;
+}
+
+section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+section .side{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+}
+
+section .side#side1{
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+section .side#side2{
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+ 
+section .side video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.content{
+    color: white;
+    padding: 50px;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    margin-top: 175vh;
+    border: 2px solid gray;
+    border-radius: 2rem;
+    text-align: center;
+    background: #333;
+    box-shadow: 5px 5px  5px gainsboro;
+}
+
+.content h2{
+    font-size: 3rem;
+}
+
+.content p{
+    font-size: 1.5rem;
+}
