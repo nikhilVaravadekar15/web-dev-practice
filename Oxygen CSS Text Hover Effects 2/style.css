@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2{
+    max-width: 40rem;
+    height: 15rem;
+    font-size: 6rem;
+    text-align: center;
+}
+
+h2 span{
+    position: relative;
+    display: inline-flex;
+    color: #03a9f4;
+}
+
+h2 span:nth-child(odd){
+    color: #333;
+    line-height: 1em;
+    overflow: hidden;
+    letter-spacing: -1em;
+    transition: 0.2s ease-in-out;
+}
+
+h2:hover span:nth-child(odd){
+    overflow:visible;
+    letter-spacing: 0;
+}
+
+h2 span:nth-child(2){
+    margin-right: 10px;
+}
+
+h2 span:nth-child(2)::before{
+    content: "2";
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+    font-size: 2.5rem;
+}
+
+h2 p{
+    position: absolute;
+    font-size: 2rem;
+    line-height: -1em;
+    color: #444;
+    font-weight: 500;
+    line-height: 1em;
+}
+
+h2:hover #first{
+    opacity: 0;
+    visibility: hidden;
+    letter-spacing: 2em;
+    transition: 0.3s;
+}
+
+h2 #last{
+    opacity: 0;
+    visibility: hidden;
+    letter-spacing: 2em;
+    transition: 0.3s;
+}
+
+
+h2:hover #last{
+    opacity: 1;
+    visibility: visible;
+    letter-spacing: 0;
+}
+
