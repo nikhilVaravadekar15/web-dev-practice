@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+*::selection {
+    background: rgb(127, 170, 219);
+}
+
+
+/* side bar section */
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.navigation {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    /* height: 100%; */
+    background: #003147;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation.active {
+    width: 60px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover {
+    background: #03a9f4;
+}
+
+.navigation ul li:nth-child(1):hover {
+    background: transparent;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    height: 45px;
+}
+
+.navigation ul li:nth-child(1) a {
+    margin-bottom: 15px;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.navigation.active ul li a .icon {
+    margin-left: 15px;
+    margin-right: 40px;
+    padding: 5px;
+}
+
+.navigation ul li:nth-child(1) a .icon {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.navigation.active ul li:nth-child(1) a .icon {
+    margin-left: 13px;
+    margin-right: 50px;
+    font-size: 30px;
+    padding: 0;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    white-space: normal;
+}
+
+
+/* main section */
+
+.main {
+    position: absolute;
+    width: calc(100% - 250px);
+    left: 250px;
+    height: 100%;
+    background: whitesmoke;
+    transition: 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 60px);
+    left: 60px;
+    transition: 0.5s;
+}
+
+.main .topbar {
+    width: 100%;
+    background: white;
+    height: 60px;
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.toggle::before {
+    font-family: fontAwesome, sans-serif;
+    content: '\f0c9';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 40px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+}
+
+.search label .fa {
+    position: absolute;
+    left: 15px;
+    top: 2px;
+    font-size: 18px;
+}
+
+.user {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.user img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.cardBox .card {
+    position: relative;
+    background: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.cardBox .card:hover {
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cardBox .card .numbers {
+    position: relative;
+    font-size: 2em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.cardBox .card .cardName {
+    color: #555;
+    text-transform: uppercase;
+}
+
+.cardBox .card .iconBox {
+    font-size: 2em;
+    color: #03a9f4;
+}
+
+
+/* chart section */
+
+.graphBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    min-height: 200px;
+}
+
+.graphBox .box {
+    position: relative;
+    background: white;
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.graphBox .box:hover {
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* details section */
+
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+/* details .recentOrders section */
+
+.details .recentOrders {
+    position: relative;
+    min-height: 425px;
+    background: white;
+    padding: 20px;
+}
+
+.cardHeader {
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+}
+
+.btn {
+    position: relative;
+    padding: 5px 10px;
+    background: #03a9f4;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #97d5f1;
+    color: #666;
+}
+
+.details table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.details table thead td {
+    font-weight: 600;
+}
+
+.details .recentOrders table tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .recentOrders table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.details .recentOrders table tbody tr:hover {
+    background: #03a9f4;
+    color: white;
+}
+
+.details .recentOrders table tr td {
+    padding: 5px 5px;
+    text-transform: capitalize;
+}
+
+.details .recentOrders table tr td {
+    padding: 8px 5px;
+}
+
+.details .recentOrders table thead tr td:nth-child(2),
+.details .recentOrders table tbody tr td:nth-child(2) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.details .recentOrders table thead tr td:nth-child(3),
+.details .recentOrders table tbody tr td:nth-child(3) {
+    text-align: center;
+}
+
+.details .recentOrders table thead tr td:last-child,
+.details .recentOrders table tbody tr td:last-child {
+    text-align: end;
+}
+
+.status {
+    position: relative;
+    padding: 5px 5px;
+    background: rgb(228, 155, 155);
+    color: white;
+    border-radius: 5px;
+}
+
+.delivered {
+    background: rgb(187, 230, 123);
+}
+
+.pending {
+    background: #f9ca3f;
+}
+
+.return {
+    background: rgb(233, 99, 46);
+}
+
+.inprogress {
+    background: #1795ce;
+}
+
+
+/* details .recentCustomers section */
+
+.details .recentCustomers {
+    position: relative;
+    min-height: 425px;
+    background: white;
+    padding: 20px;
+}
+
+.details .recentCustomers .imageBox {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.details .recentCustomers .imageBox img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details .recentCustomers table tr {
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.details .recentCustomers table tbody tr:hover {
+    background: #03a9f4;
+    color: white;
+}
+
+.details .recentCustomers table tbody td:first-child {
+    width: 60px;
+    padding: 5px 10px;
+}
+
+
+/* media queries */
+
+@media (max-width: 992px) {
+    .navigation {
+        left: -250px;
+    }
+    .navigation.active {
+        left: 0;
+        width: 250px;
+    }
+    .main {
+        width: 100%;
+        left: 0;
+        height: 100%;
+    }
+    .main.active {
+        width: calc(100%-250px);
+        left: 250px;
+    }
+    .graphBox {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cardHeader h2 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 550px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cardHeader h2 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .main .topbar {
+        width: 100%;
+    }
+    .search {
+        width: 350px;
+        margin: 0 5px;
+    }
+    .search label input {
+        font-size: 16px;
+    }
+    .search label .fa {
+        font-size: 16px;
+    }
+    .user {
+        width: 50px;
+        height: 50px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 475px) {
+    .main .topbar {
+        width: 100%;
+    }
+    .search {
+        width: 250px;
+        margin: 0 1px;
+    }
+    .user {
+        width: 35px;
+        height: 35px;
+    }
+    /* .details .recentOrders table {
+        width: 400px;
+    } */
+    .cardHeader {
+        height: 50px;
+        padding: 5px;
+    }
+    .cardHeader h2 {
+        font-weight: 600;
+    }
+    .details .recentOrders table tbody tr {
+        font-size: 14px;
+    }
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active {
+        width: 100%;
+        left: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    .toggle {
+        z-index: 10000;
+    }
+    .toggle.active {
+        color: white;
+    }
+}
