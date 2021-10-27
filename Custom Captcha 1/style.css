@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #4db2ec;
+}
+
+.wrapper {
+    width: 500px;
+    background: white;
+    border-radius: 10px;
+    padding: 22px 3px 40px;
+    /* display: flex;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.wrapper header {
+    color: #4db2ec;
+    font-size: 33px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.wrapper .captcha-area {
+    display: flex;
+    height: 65px;
+    margin: 30px 0 20px;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: center;
+}
+
+.wrapper .captcha-area .captcha-img {
+    height: 100%;
+    width: 350px;
+    /* width: 375px; */
+    border-radius: 5px;
+    background: black;
+    position: relative;
+    cursor: none;
+    margin-right: 15px;
+}
+
+.wrapper .captcha-area .captcha-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper .captcha-area .captcha-img .captcha-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    color: whitesmoke;
+    font-size: 30px;
+    letter-spacing: 5px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 0px 2px rgba(0, 0, 0, 0.5);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wrapper button {
+    border: none;
+    outline: none;
+    color: white;
+    background: #4db2ec;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.wrapper .captcha-area .reload-btn {
+    width: 75px;
+    height: 100%;
+    font-size: 25px;
+}
+
+.wrapper .captcha-area .reload-btn:hover i {
+    color: whitesmoke;
+    animation: rotation 0.5s linear;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.wrapper .input-area {
+    height: 60px;
+    width: 95%;
+    position: relative;
+    margin: auto;
+}
+
+.wrapper .input-area input {
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+
+.wrapper .input-area input:is(:focus, :valid) {
+    padding-left: 19px;
+    border: 2px solid #4db2ec;
+}
+
+.wrapper .input-area input:valid+.check-btn {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .input-area .check-btn {
+    position: absolute;
+    right: 7px;
+    height: 90%;
+    width: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    font-weight: 550;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.wrapper .status-text {
+    font-size: 18px;
+    color: red;
+    text-align: center;
+    margin: 20px 0 -5px 0;
+    display: none;
+}
