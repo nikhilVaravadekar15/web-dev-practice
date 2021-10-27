@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- https://boxicons.com/ -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <title>Responsive Analog Clock Ui Design</title>
+</head>
+<body>
+
+    <section class="clock container">
+        <div class="clock__container grid">
+            <div class="clock__content grid">
+                <div class="clock__circle">
+                    <span class="clock__twelve"></span>
+                    <span class="clock__three"></span>
+                    <span class="clock__six"></span>
+                    <span class="clock__nine"></span>
+
+                    <div class="clock__round"></div>
+                    <div class="clock__hour" id="clock-hour"></div>
+                    <div class="clock__minutes" id="clock-minutes"></div>
+                    <div class="clock__seconds" id="clock-seconds"> </div>
+
+                     <!-- Dark/light button -->
+                     <!-- <div class="clock__theme">
+                        <i class='bx bxs-moon' id="theme-button"></i>
+                    </div> -->
+                </div>            
+                <div class="clock__digital">
+                    <div class="clock__text">
+                        <span id="clock__text__hours">HH</span>
+                        <span id="clock__text__minutes">MM</span>
+                        <span id="clock__text__ampm">AMPM</span>
+                    </div>
+                    <div class="clock__date">
+                        <span id="clock__date__day">DD</span>
+                        <span id="clock__date__month">MM</span>
+                        <span id="clock__date__year">YYYY</span>
+                        <div id="clock__date__textFormat"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <a href="https://www.youtube.com/" target="_blank" class="clock__logo">youtube</a> -->
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
