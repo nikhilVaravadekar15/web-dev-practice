@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #5372f0;
+    font-family: -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+    width: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 18px 25px 20px;
+    transition: 0.3s;
+}
+
+.wrapper:hover {
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper :where(.title, li, li, i, .details) {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .title {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .title img {
+    margin-top: 5px;
+}
+
+.wrapper .title h2 {
+    font-size: 21px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.wrapper .content {
+    margin: 10px 0;
+}
+
+.wrapper .content p {
+    font-size: 18px;
+}
+
+.wrapper .content ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 7px;
+    margin: 12px 0;
+    border: 1px solid #c4bebe;
+    border-radius: 5px;
+}
+
+.wrapper .content ul li {
+    list-style: none;
+    margin: 4px 3px;
+    border-radius: 5px;
+    background: #e7e5e5;
+    padding: 7px 10px 5px 10px;
+    border: 1px solid #c9c9c9;
+}
+
+.wrapper .content ul li i {
+    height: 20px;
+    width: 20px;
+    font-size: 13px;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: #000000;
+    background: #cacaca;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.wrapper .content ul input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.wrapper .content ul input::selection {
+    background: cornflowerblue;
+}
+
+.wrapper .content ul input.blink {
+    animation: blinking 0.3s linear 3;
+}
+
+@keyframes blinking {
+    0% {
+        border: none;
+    }
+    100% {
+        border-bottom: 1px solid red;
+    }
+}
+
+.wrapper .details {
+    justify-content: space-between;
+    height: 50px;
+}
+
+.wrapper .details p {
+    font-size: 20px;
+}
+
+.wrapper .details p span.blink {
+    animation: blinking 0.3s linear 3;
+}
+
+.wrapper .details button {
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 9px 15px;
+    border-radius: 5px;
+    height: 80%;
+    background: #5372f0;
+}
