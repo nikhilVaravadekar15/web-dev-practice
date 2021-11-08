@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #09383e;
+}
+
+.card{
+    position: relative;    
+    width: 300px;
+    height: 450px;
+    background: white;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.card:hover{
+    transform: perspective(2000px) translateX(50%);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.card .cover{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transform-origin: left;
+    border-radius: 10px;   
+}
+
+.card .cover::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 120%;
+    background: white;
+    transform: rotate(34deg);
+    box-shadow: 0 0 0 15px #47bfce;
+    transition: 0.5s;
+}
+
+.card:hover .cover{
+    transform: rotateY(-180deg);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.card:hover .cover::before{
+    width: 0;
+    box-shadow: 0 0 0 300px #47bfce;
+    transform: rotate(136.5deg);
+}
+
+.card .cover img{
+    height: 300px;
+    width: 250px;
+    z-index: 1;
+}
+
+.card .product__details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
+
+.card .product__details img{
+    height: 300px;
+}
+
+.card .product__details h3{
+    font-weight: 550;
+    margin: 5px 0;  
+}
+
+.card .product__details h2{
+    font-size: 1.5em ;
+    color: #e82a5b;
+    font-weight: 600;
+}
+
+.card .product__details a{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #47bfce;
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
