@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./style.css">
+    <title>scroll demo</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="left-panel"></div>
+        <div class="middle-panel">
+            <div class="main-writable-content"></div>
+        </div>
+        <div class="right-panel">
+            <div class="main-readable-content"></div>
+        </div>
+    </div>
+
+    <script>
+        const middlePanel = document.querySelector(".middle-panel")
+        const rightPanel = document.querySelector(".right-panel")
+
+        middlePanel.addEventListener("scroll", (event) => {
+            let middlePanelScroll = middlePanel.scrollTop
+            rightPanel.scrollTop = middlePanelScroll
+        })
+        
+        rightPanel.addEventListener("scroll", (event) => {
+            rightPanel.scrollTop = middlePanel.scrollTop
+        })
+    </script>
+
+</body>
+</html>
