@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #0e6ffc;
+}
+
+*::selection{
+    background-color: skyblue;
+}
+
+.wrapper{
+    box-sizing: content-box;
+    background-color: #ffffff;
+    height: 70px;
+    padding: 48px 32px;
+    display: flex;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.words{
+    overflow: hidden;
+}
+span{
+    display: block;
+    height: 100%;
+    padding-left: 8px;
+    color: #0e6ffc;
+    animation: spin_words 6s infinite;
+}
+
+@keyframes spin_words {
+    10%{
+        transform: translateY(-112%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    35%{
+        transform: translateY(-112%);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+    60%{
+        transform: translateY(-312%);
+    }
+    75%{
+        transform: translateY(-300%);
+    }
+    85%{
+        transform: translateY(-412%);
+    }
+    100%{
+        transform: translateY(-400%);
+    }
+}
